@@ -19,7 +19,7 @@ const router = express.Router();
  * @apiParam {String} password User's password.
  *
  * @apiExample Example usage:
- * curl -i -X POST -d "username=admin@gmail.com.vn&password=123456789" http://localhost:8000/admin/login
+ * curl -i -X POST -d "email=admin@gmail.com.vn&password=123456789" https://chatbox-project-final.onrender.com/admin/login
  *
  * @apiSuccess {String} token Authentication token.
  *
@@ -50,7 +50,7 @@ router.post("/login", loginAuth);
  * @apiDescription Get a list of all users.
  *
  * @apiExample Example usage:
- * curl -i -H "Authorization: Bearer YOUR_TOKEN" http://localhost:8000/allUsers
+ * curl -i -H "Authorization: Bearer YOUR_TOKEN" https://chatbox-project-final.onrender.com/allUsers
  * @apiHeader  {String} Authorization='bearer '
  * @apiSuccess {Object[]} users List of user objects.
  * @apiSuccess {String} users._id User's unique ID.
@@ -188,7 +188,7 @@ router.get("/allUsers", checkAuth, allUsers);
  * @apiParam {String} email User's email.
  * @apiHeader  {String} Authorization='bearer '
  * @apiExample Example usage:
- * curl -i -H "Authorization: Bearer YOUR_TOKEN" -X POST -d "username=newuser&password=newpassword&email=newuser@gmail.com" http://localhost:8000/admin/addUser
+ * curl -i -H "Authorization: Bearer YOUR_TOKEN" -X POST -d "username=newuser&password=newpassword&email=newuser@gmail.com" https://chatbox-project-final.onrender.com/admin/addUser
  *
  * @apiSuccess {String} message Success message.
  *
@@ -223,7 +223,7 @@ router.post("/addUser", checkAuth, newUser);
  * @apiParam {String} email New email.
  * @apiHeader  {String} Authorization='bearer '
  * @apiExample Example usage:
- * curl -i -H "Authorization: Bearer YOUR_TOKEN" -X PUT -d "username=updateduser&password=updatedpassword&email=updateduser@example.com" http://localhost:8000/admin/edituser/656961790644a2eecf1b1af4
+ * curl -i -H "Authorization: Bearer YOUR_TOKEN" -X PUT -d "username=updateduser&password=updatedpassword&email=updateduser@example.com" https://chatbox-project-final.onrender.com/admin/edituser/656961790644a2eecf1b1af4
  *
  * @apiSuccess {String} message Success message.
  *
@@ -261,7 +261,7 @@ router.put("/edituser/:_id", checkAuth, editUser);
  * @apiParam {String} _id User's unique ID.
  * @apiHeader  {String} Authorization='bearer '
  * @apiExample Example usage:
- * curl -i -H "Authorization: Bearer YOUR_TOKEN" -X DELETE http://localhost:8000/admin/deleteuser/656961790644a2eecf1b1af4
+ * curl -i -H "Authorization: Bearer YOUR_TOKEN" -X DELETE https://chatbox-project-final.onrender.com/admin/deleteuser/656961790644a2eecf1b1af4
  *
  * @apiSuccess {String} message Success message.
  *

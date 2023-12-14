@@ -17,7 +17,7 @@ const router = express.Router();
  * @apiParam {String} password User's password.
  *
  * @apiExample Example usage:
- * curl -i -X POST -d "email=&password=secretpassword" http://localhost:8000/user/login
+ * curl -i -X POST -d "email=&password=secretpassword" https://chatbox-project-final.onrender.com/user/login
  *
  * @apiSuccess {String} token Authentication token.
  *
@@ -36,7 +36,7 @@ const router = express.Router();
  *       "message": "Invalid credentials"
  *     }
  */
-router.post("admin/login", loginAuth);
+router.post("/login", loginAuth);
 /**
  * @api {get} /data Get User Data
  * @apiVersion 1.0.0
@@ -47,7 +47,7 @@ router.post("admin/login", loginAuth);
  * @apiDescription Get user-specific data.
  *
  * @apiExample Example usage:
- * curl -i -H "Authorization: Bearer YOUR_TOKEN" http://localhost:8000/user/data
+ * curl -i -H "Authorization: Bearer YOUR_TOKEN" https://chatbox-project-final.onrender.com/user/data
  *
  * @apiSuccess {String} username User's username.
  * @apiSuccess {String} email User's email.
@@ -82,7 +82,7 @@ router.get("/data", userData);
  * @apiParam {String} email User's email address.
  *
  * @apiExample Example usage:
- * curl -i -X POST -d "username=newuser&password=newpassword&email=newuser@example.com" http://localhost:8000/user/signup
+ * curl -i -X POST -d "username=newuser&password=newpassword&email=newuser@example.com" https://chatbox-project-final.onrender.com/user/signup
  *
  * @apiSuccess {String} message Success message.
  *
@@ -114,7 +114,7 @@ router.post("/signup", addUser);
  * @apiParam {String} message User's chat message.
  *
  * @apiExample Example usage:
- * curl -i -H "Authorization: Bearer YOUR_TOKEN" -X POST -d "message=Hello, Chatbot!" http://localhost:8000/user/chatbox
+ * curl -i -H "Authorization: Bearer YOUR_TOKEN" -X POST -d "message=Hello, Chatbot!" https://chatbox-project-final.onrender.com/user/chatbox
  *
  * @apiSuccess {String} response Chatbot's response.
  *

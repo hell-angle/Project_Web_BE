@@ -6,8 +6,8 @@
   "apidoc": {
     "title": "API DOCS",
     "version": "1.0.0",
-    "url": "http://localhost:8000",
-    "sampleUrl": "http://localhost:8000"
+    "url": "https://chatbox-project-final.onrender.com",
+    "sampleUrl": "https://chatbox-project-final.onrender.com"
   },
   "scripts": {
     "start": "nodemon app.js",
@@ -17,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apidoc": "^1.2.0",
+    "apidoc": "^0.29.0",
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
