@@ -5,7 +5,7 @@ require("./config/db");
 
 app.use(
   cors({
-    origin: ["https://chatboxproject.vercel.app"],
+    origin: ["https://chatboxproject.vercel.app","https://chatbox-project-final.onrender.com/admin/login"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
